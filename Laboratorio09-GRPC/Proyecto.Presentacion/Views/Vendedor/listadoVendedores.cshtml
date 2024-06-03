@@ -1,0 +1,31 @@
+﻿﻿@model IEnumerable<Proyecto.Presentacion.Models.VendedorModel>
+
+@{
+    ViewData["Title"] = "listadoVendedores";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h1>listado de Vendedores</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.ide_ven)</th>
+            <th>@Html.DisplayNameFor(model => model.nom_ven)</th>
+            <th>@Html.DisplayNameFor(model => model.sue_ven)</th>
+            <th>@Html.DisplayNameFor(model => model.fec_ing)</th>
+            <th>@Html.DisplayNameFor(model => model.nom_dis)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ide_ven)</td>
+                <td>@Html.DisplayFor(modelItem => item.ven)</td>
+                <td>@Html.DisplayFor(modelItem => item.sue_ven)</td>
+                <td>@Html.DisplayFor(modelItem => item.fec_ing)</td>
+                <td>@Html.DisplayFor(modelItem => item.nom_dis)</td>
+            </tr>
+        }
+    </tbody>
+</table>

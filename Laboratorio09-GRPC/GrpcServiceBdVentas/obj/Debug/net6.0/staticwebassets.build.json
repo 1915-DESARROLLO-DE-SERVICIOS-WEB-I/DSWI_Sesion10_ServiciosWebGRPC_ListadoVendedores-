@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OL+Ltw37nVhskrUIxd19BG9X5wKpJuwhBeDl7qtnpXg=",
+  "Source": "GrpcServiceBdVentas",
+  "BasePath": "_content/GrpcServiceBdVentas",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServiceBdVentas.Protos";
+
+
+//Sesión 10
+package vendedor;
+
+//MÉTODO DE SERVICIO
+service Vendedor{
+	rpc listadoVendedores(Empty) returns (vendedorListResponse);
+}
+
+
+//DEFINICIÓN DE MENSAJES __________________________
+//cuando no hay parámetros
+message Empty{}  
+
+
+//cuando no hay parámetros
+message vendedorResponse{
+	int32 ide_ven = 1; //los números hacen refrencia al número de orden de los atributos de la clase según datos traídos por el SP
+	string nom_ven = 2;
+	double sue_ven = 3;
+	string fec_ing = 4;
+	string nom_dis = 5;
+
+}
+
+//define columnas de la tablatraídas desde el SP
+message vendedorListResponse{
+	repeated vendedorResponse items = 1; //items = 1 HACE REFERENCIA A QUE EL MÉTODO vendedorResponse se debe repetir cuantas veces sea necesario partiendo desde el item 1
+}
+
+
